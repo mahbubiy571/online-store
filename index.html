@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Store</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body>
+    <header class="bg-base-300">
+      <div class="align-elements">
+        <div class="navbar">
+          <div class="navbar-start">
+            <!-- LOGO -->
+          </div>
+          <div class="navbar-center">
+            <ul class="menu menu-horizontal">
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <!-- LOGIN -->
+            <!-- BADGE -->
+            <!-- DARK MODE -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="align-elements">
+          <h2 class="text-3xl my-10">Products:</h2>
+          <ul
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
+            id="products-list"
+          ></ul>
+          <template>
+            <li data-aos="zoom-in-right">
+              <div class="card bg-base-100 w-full shadow-sm">
+                <figure>
+                  <img
+                    class="product-image"
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes"
+                  />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title line-clamp-1">Card Title</h2>
+                  <p class="descraption line-clamp-3">
+                    A card component has a figure, a body part, and inside body
+                    there are title and actions parts
+                  </p>
+                  <h4 class="price"></h4>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </template>
+        </div>
+        <div class="flex justify-center">
+          <button class="btnEl btn btn-dash btn-warning my-5">Show More</button>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./src/js/app.js"></script>
+  </body>
+</html>
