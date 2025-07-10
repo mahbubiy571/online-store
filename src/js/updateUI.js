@@ -33,12 +33,6 @@ function updateUI({ products }) {
       addProduct(product);
     });
 
-    btnEl.addEventListener("click", async () => {
-      const data = await getData("https://dummyjson.com/products?limit=30");
-      updateUI(data);
-    });
-    
-
     ProductsList.appendChild(clone);
   });
 }
