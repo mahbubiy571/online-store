@@ -1,17 +1,13 @@
 import { getData } from "./request.js";
 import { updateUI } from "./updateUI.js";
 import { initThemeToggle } from "./theme.js";
-
-const btnEl = document.querySelector(".btnEl");
+import { initShowMore } from "./showMore.js";
 
 getData("https://dummyjson.com/products")
   .then((data) => updateUI(data))
   .catch((eror) => console.log(eror));
 
-btnEl.addEventListener("click", async () => {
-  const data = await getData("https://dummyjson.com/products?limit=30");
-  updateUI(data);
+document.addEventListener("DOMContentLoaded", () => {
+  initShowMore();
+  initThemeToggle({ allowChange: true });
 });
-
-initThemeToggle({ allowChange: true });
-

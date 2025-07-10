@@ -20,7 +20,7 @@ function updateUI({ products }) {
     const price = clone.querySelector(".price");
     const a = clone.querySelector("a");
     const buyBtn = clone.querySelector(".buy-button");
-    
+
     a.href = `./about.html?id=${id}`;
     image.src = thumbnail;
     cardTitle.textContent = title;
@@ -36,18 +36,15 @@ function updateUI({ products }) {
   });
 }
 
-
-
 function updateUIAboutUI(product) {
   const { title, description, price, thumbnail } = product;
-  console.log(product)
 
   const image = document.querySelector(".about-img");
   const titleEl = document.querySelector(".about-title");
   const descriptionEl = document.querySelector(".about-description");
   const priceEl = document.querySelector(".about-price");
-  const buyBtn = document.querySelector(".buy-btn");  
-  const id  = document.querySelector(".product-id")
+  const buyBtn = document.querySelector(".buy-btn");
+  const id = document.querySelector(".product-id");
   const discountPercentage = document.querySelector(".discountPercentage");
 
   image.src = thumbnail;
@@ -55,7 +52,7 @@ function updateUIAboutUI(product) {
   descriptionEl.textContent = description;
   priceEl.textContent = `Now only ${price}$ !`;
   id.textContent = `Mahsulot ID: #${product.id}`;
-  discountPercentage.textContent = `${product.discountPercentage}% 🔥Discount`
+  discountPercentage.textContent = `${product.discountPercentage}% 🔥Discount`;
 
   buyBtn.addEventListener("click", (e) => {
     e.preventDefault();
