@@ -20,6 +20,7 @@ function updateUI({ products }) {
     const price = clone.querySelector(".price");
     const a = clone.querySelector("a");
     const button = clone.querySelector(".buy-button");
+    const btnEl = document.querySelector(".btnEl");
 
     a.href = `./about.html?id=${id}`;
     image.src = thumbnail;
@@ -27,11 +28,16 @@ function updateUI({ products }) {
     descraption.textContent = _descraption;
     price.textContent = _price + `$`;
 
-    button.addEventListener('click', (e) => {
+    button.addEventListener("click", (e) => {
       e.preventDefault();
       addProduct(product);
-    })
+    });
 
+    btnEl.addEventListener("click", async () => {
+      const data = await getData("https://dummyjson.com/products?limit=30");
+      updateUI(data);
+    });
+    
 
     ProductsList.appendChild(clone);
   });

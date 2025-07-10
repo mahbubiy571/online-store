@@ -1,5 +1,7 @@
 import { getData } from "./requst.js";
 import { updateUIAboutUI } from "./updateUI.js";
+import { initThemeToggle } from './theme.js';
+
 
 let id = new URLSearchParams(document.location.search).get("id");
 
