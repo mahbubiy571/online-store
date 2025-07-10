@@ -1,4 +1,4 @@
-import { addProduct } from "./bakset.js";
+import { addProduct } from "./basket.js";
 
 const template = document.querySelector("template");
 const ProductsList = document.getElementById("products-list");
