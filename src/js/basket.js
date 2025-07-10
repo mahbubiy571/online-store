@@ -31,6 +31,4 @@ export const addProduct = (p) => {
     products.push({ ...p, amount: 1 });
   }
   changeBasket();
-
-  console.log(products);
 };
