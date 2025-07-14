@@ -3,8 +3,7 @@ import { addProduct } from "./basket.js";
 const template = document.querySelector("template");
 const ProductsList = document.getElementById("products-list");
 const cartList = document.getElementById("card-list");
-const CartTemplate = document.getElementById("cart-template")
-
+const CartTemplate = document.getElementById("cart-template");
 
 function updateUI({ products }) {
   products.forEach((product, index) => {
@@ -67,8 +66,11 @@ function updateCartUI(products) {
   products.forEach((product) => {
     const clone = CartTemplate.content.cloneNode(true);
 
+    const priceEL = clone.querySelector(".price");
     const productImage = clone.querySelector(".product-image");
+
     productImage.src = product.thumbnail;
+    priceEL.textContent = `${product.price}$`;
 
     cartList.appendChild(clone);
   });
