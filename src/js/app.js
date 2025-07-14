@@ -2,6 +2,7 @@ import { getData } from "./request.js";
 import { updateUI } from "./updateUI.js";
 import { initThemeToggle } from "./theme.js";
 import { initShowMore } from "./showMore.js";
+import "./search.js";
 
 getData("https://dummyjson.com/products")
   .then((data) => updateUI(data))
