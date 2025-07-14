@@ -93,7 +93,15 @@
     <main>
       <section>
         <div class="align-elements">
-          <h2 class="text-3xl my-10">Products:</h2>
+          <div class="flex justify-between items-center">
+            <h2 class="text-3xl my-10">Products:</h2>
+            <div>
+              <fieldset class="fieldset">
+                <legend class="fieldset-legend">Maxsulot qidrish:</legend>
+                <input  type="text" class="input w-80" placeholder="Type here" />
+              </fieldset>
+            </div>
+          </div>
           <ul
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
             id="products-list"
@@ -136,7 +144,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
-    
+
     <script type="module" src="./src/js/app.js"></script>
   </body>
 </html>
