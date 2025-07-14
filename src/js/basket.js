@@ -1,6 +1,8 @@
 const productAmount = document.getElementById("products-amount");
 
-let products = [];
+let products = localStorage.getItem("products")
+  ? JSON.parse(localStorage.getItem("products"))
+  : [];
 
 const changeBasket = () => {
   let amount = 0;
@@ -9,6 +11,10 @@ const changeBasket = () => {
   });
   productAmount.textContent = amount;
 };
+
+if (products) {
+  changeBasket();
+}
 
 export const addProduct = (p) => {
   let isAdded = products.find((product) => product.id == p.id);
@@ -31,4 +37,6 @@ export const addProduct = (p) => {
     products.push({ ...p, amount: 1 });
   }
   changeBasket();
+
+  localStorage.setItem("products", JSON.stringify(products));
 };
