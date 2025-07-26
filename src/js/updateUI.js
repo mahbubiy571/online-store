@@ -23,7 +23,7 @@ function updateUI({ products }) {
     const a = clone.querySelector("a");
     const buyBtn = clone.querySelector(".buy-button");
 
-    a.href = `./product.html?id=${id}`; // ⚠️ Fayl nomi about.html emas, product.html bo‘lishi kerak
+    a.href = `./product.html?id=${id}`; 
     image.src = thumbnail;
     cardTitle.textContent = title;
     descraption.textContent = _descraption;
@@ -38,7 +38,6 @@ function updateUI({ products }) {
   });
 }
 
-// ⬇️ O'zgartirilgan funksiya nomi va classlar
 function updateUIProductUI(product) {
   const { title, description, price, thumbnail } = product;
 
@@ -77,5 +76,4 @@ function updateCartUI(products) {
   });
 }
 
-// ⬇️ Eksport qilinayotgan yangi nomlar
 export { updateUI, updateUIProductUI, updateCartUI };

@@ -11,3 +11,6 @@ if(localProducts) {
 
 initThemeToggle({ allowChange: true });
 changeBasket();
+
+
+  
